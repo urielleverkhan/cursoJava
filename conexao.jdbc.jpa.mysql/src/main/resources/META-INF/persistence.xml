@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd"
+             version="2.2">
+
+        <!-- <persistence-unit name="part1-DTO">
+
+            <description> Unidade de persistencia da parte 1 do tutorial basico jpa da digital innovation one sem implementacoes (Somente jpa)</description>
+            <class>classes.Aluno</class>
+
+            <properties>
+                <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost/digital_innovation?useTimezone=true&serverTimezone=UTC" />
+                <property name="javax.persistence.jdbc.user" value="root" />
+                <property name="javax.persistence.jdbc.password" value="2443" />
+                <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver" />
+            </properties>
+        </persistence-unit> -->
+
+    <persistence-unit name="part2-DIO">
+        <description>Unidade de persistencia da parte 2 do tutorial basico jpa da digital innovation one sem implementacoes (Hibernate e Eclipse)</description>
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+       <!-- <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider> -->
+        <class>com.digital.innovation.jdbcjpamysql.conexao.jdbc.jpa.mysql.alunos</class>
+        <properties>
+                <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost/digital_innovation?serverTimezone=UTC" />
+                <property name="javax.persistence.jdbc.user" value="root" />
+                <property name="javax.persistence.jdbc.password" value="2443" />
+                <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver" />
+
+    <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL8Dialect" />
+    <property name="hibernate.show_sql" value="true" />
+    <property name="hibernate.format_sql" value="true" />
+    <property name="hibernate.hbm2ddl.auto" value="validate" /> <!-- validate, update, create, create-drop -->
+
+    <!--
+    <property name="eclipselink.target-database" value="MySQL" />
+    <property name="eclipselink.logging.level.sql" value="FINE" />
+    <property name="eclipselink.logging.parameters" value="true" />
+    <property name="eclipselink.ddl-generation" value="drop-and-create-tables" />
+    -->
+
+</properties>
+</persistence-unit>
+</persistence>
